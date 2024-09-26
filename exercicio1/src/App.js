@@ -23,7 +23,7 @@ function App() {
   function Calcular() {
     const indice = hambSelecionado;
 
-    if (Number(indice) < 0) {
+    if ((Number(indice) <= 0) || (quantidade <= 0)) {
       setResultado(
         <div className='resultado'>
           Selecione um hamburguer para continuar!
