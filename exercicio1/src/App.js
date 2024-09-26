@@ -31,15 +31,15 @@ function App() {
       );
     } else {
       const hamb = cardapio[indice];
-      const totalHamb = hamb.preco * quantidade;
+      const totalHamb = Number(hamb.preco * quantidade);
       const serv = servico[servicoSelecionado];
-      const totalFinal = totalHamb + serv.pServico;
+      const totalFinal = Number(totalHamb + serv.pServico);
 
       setResultado(
         <div className='resultado'>
           Nome: {hamb.nome} <br />
           Quantidade: {quantidade} <br />
-          Preço: R${hamb.preco.toFixed(2)} <br />
+          Preço: R${totalHamb.toFixed(2)} <br />
           Tipo de Serviço: {serv.snome} <br />
           Custo do Serviço: R${serv.pServico.toFixed(2)} <br />
           Total: R${totalFinal.toFixed(2)}
